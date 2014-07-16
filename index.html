@@ -9,26 +9,60 @@
   </head>
   <body>
     <div class="container">
-      <h1>Address Book</h1>
-      <form id="form-group">
-          <div class="new-contact">
-            <input type="text" placeholder="First Name" class="first-name">
-            <p></p>
-            <input type="text" placeholder="Last Name" class="last-name">
-            <p></p>
-          </div> <!--new-contact for First & Last name-->
-          <div class="new-address">
-            <input type="text" placeholder="Street" class="street">
-            <p></p>
-            <input type="text" placeholder="City" class="city">
-            <p></p>
-            <input type="text" placeholder="State" class="state">
-            <p></p>
-            </div><!--new contact for new address-->
-          <button class="btn btn-success" type="small"> + Address</button>
-          <button class="btn btn-warning" type="small"> Create Contact </button>
-      </form> <!--form-->
 
+
+        <div class="row">
+          <div class="col-md-6">
+            <h1>Address Book</h1>
+            <form id="new-contact">
+              <div class="form-group">
+                <input type="text" placeholder="First Name" class="first-name">
+                <p></p>
+              </div><!--div for First name-->
+              <div class="form-group">
+                <input type="text" placeholder="Last Name" class="last-name">
+                <p></p>
+              </div> <!--div for Last name-->
+
+              <div id="new-address">
+                <div class ="new-address">
+                  <div class="form-group">
+                    <input type="text" placeholder="Street" class="street">
+                    <p></p>
+                  </div><!--div for street -->
+                  <div class="form-group">
+                    <input type="text" placeholder="City" class="city">
+                    <p></p>
+                  </div> <!--div for city -->
+                  <div class ="form-group">
+                    <input type="text" placeholder="State" class="state">
+                    <p></p>
+                  </div>
+                </div><!--new contact for new address-->
+              </div>
+
+                <span class="btn btn-success" id="add-address"> + Address</span>
+
+                <button type="submit" class="btn btn-warning"> + Create Contact </button>
+            </form> <!--form-->
+              <h2>Contacts:</h2>
+              <ul id="contacts">
+              </ul>
+            </div><!-- column-->
+
+
+            <div class="col-md-6">
+              <div id="show-contact">
+                <h1>Contact Info</h1>
+                <p>First Name:<span class="first-name"></span></p>
+                <p>Last Name:<span class="last-name"></span></p>
+                <p>Addresses:</p>
+                <ul id="addresses">
+                </ul>
+              </div> <!--contacts -->
+            </div><!--column for class-->
+
+      </div><!-- row -->
     </div> <!--container-->
   </body>
 </html>
