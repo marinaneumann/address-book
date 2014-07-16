@@ -19,6 +19,9 @@ $(document).ready(function(){
 
       var newContact = { firstName: inputFirstName, lastName: inputLastName, addresses: [] };
 
+      $("input.first-name").val("");
+      $("input.last-name").val("");
+
   $('.new-address').each(function() {
       var inputCity = $(this).find("input.city").val();
       var inputStreet = $(this).find("input.street").val();
@@ -28,13 +31,31 @@ $(document).ready(function(){
 
       newContact.addresses.push(newAddress);
 
+      $(this).remove();
+
     });
+
   $("ul#contacts").append("<li><span class='contact'>"+ newContact.firstName + "</span></li>");
 
   $(".contact").last().click(function() {
+      $("#show-contact").show();
+
+      $('.first-name').text(newContact.firstName);
+      $('.last-name').text(newContact.lastName);
+
+      $("ul#addresses").text("");
+      console.log(newContact.addresses.length)
+      newContact.addresses.forEach(function(address) {
+        $("ul#addresses").append("<li>" + address.street + ", " + address.city + ", " + address.state + "</li>");
+      });
+
 
   });
 
-
+  // $('input#first-name').val("");
+  // $('input#last-name').val("");
+  // $('input#street').val("");
+  // $('input#city').val("");
+  // $('input#state').val("");
   });
 });
