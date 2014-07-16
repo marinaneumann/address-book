@@ -17,31 +17,38 @@
             <form id="new-contact">
               <div class="form-group">
                 <input type="text" placeholder="First Name" class="first-name">
-                <p></p>
               </div><!--div for First name-->
               <div class="form-group">
                 <input type="text" placeholder="Last Name" class="last-name">
-                <p></p>
               </div> <!--div for Last name-->
 
               <div id="new-address">
                 <div class ="new-address">
                   <div class="form-group">
                     <input type="text" placeholder="Street" class="street">
-                    <p></p>
                   </div><!--div for street -->
                   <div class="form-group">
                     <input type="text" placeholder="City" class="city">
-                    <p></p>
                   </div> <!--div for city -->
                   <div class ="form-group">
                     <input type="text" placeholder="State" class="state">
-                    <p></p>
                   </div>
                 </div><!--new contact for new address-->
               </div>
 
+              <div id ="phone-email">
+                <div class="phone-email">
+                  <div class="form-group">
+                    <input type="text" placeholder="Phone Number" class ="phone">
+                  </div><!--div for phone #-->
+                  <div class="form-group">
+                    <input type="text" placeholder="Email Address" class="email">
+                  </div><!-- dive for email -->
+                </div>
+              </div>
                 <span class="btn btn-success" id="add-address"> + Address</span>
+                <span class="btn btn-info" id="email-phone"> + Phone/Email</span>
+
 
                 <button type="submit" class="btn btn-warning"> + Create Contact </button>
             </form> <!--form-->
@@ -58,6 +65,12 @@
                 <p>Last Name:<span class="last-name"></span></p>
                 <p>Addresses:</p>
                 <ul id="addresses">
+                </ul>
+                <p>Phone:</p>
+                <ul id="phone">
+                </ul>
+                <p>Email:</p>
+                <ul id="email">
                 </ul>
               </div> <!--contacts -->
             </div><!--column for class-->
